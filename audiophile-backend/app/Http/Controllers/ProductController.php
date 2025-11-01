@@ -27,7 +27,6 @@ class ProductController extends Controller
             'is_new' => 'boolean',
             'category' => 'required|string|max:255',
             'name' => 'required|string|max:255',
-            'slug' => 'required|string|max:255|unique:products,slug',
             'image' => 'nullable|image|max:2048',
             'description' => 'required|string',
             'price' => 'required|numeric|min:0',
@@ -83,7 +82,7 @@ class ProductController extends Controller
             'is_new' => 'boolean',
             'category' => 'required|string|max:255',
             'name' => 'required|string|max:255',
-            'slug' => 'required|string|max:255|unique:products,slug',
+            
             'image' => 'required|image|max:2048',
             'description' => 'required|string',
             'price' => 'required|numeric|min:0',
