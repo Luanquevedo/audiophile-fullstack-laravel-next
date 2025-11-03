@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\ProductImage;
 use App\Models\Product;
 use Illuminate\Http\Request;
 use  Illuminate\Support\Facades\Storage;
@@ -14,7 +15,7 @@ class ProductController extends Controller
      */
     public function index()
     {
-       $products = Product::with('images')->latest()->get();
+       $products = Product::with('images')->get();
        return response()->json($products);
     }
 
